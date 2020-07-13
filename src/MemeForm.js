@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import uuid from "uuid/v4";
+import { v4 as uuidv4 } from "uuid";
 
 const INITIAL_STATE = { topText: "", bottomText: "", imgUrl: "" };
 function MemeForm({ addMeme }) {
@@ -7,7 +7,8 @@ function MemeForm({ addMeme }) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    addMeme(formData);
+    //add id to line below
+    addMeme({...formData, id: uuidv4()});
     setFormData(INITIAL_STATE);
   };
 

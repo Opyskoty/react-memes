@@ -1,8 +1,8 @@
 import React from "react";
 
-function Meme({ topText, bottomText, imgUrl, removeMeme }) {
+function Meme({ id, topText, bottomText, imgUrl, removeMeme }) {
   const deleteMeme = () => {
-    removeMeme(imgUrl);
+    removeMeme(id);
   }
   return (
     <div className="Meme">

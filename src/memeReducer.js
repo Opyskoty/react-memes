@@ -6,7 +6,7 @@ function memeReducer(state = INITIAL_STATE, action){
       return {...state, memes: [...state.memes, action.payload]};
     
     case "REMOVE":
-      return {...state, memes: state.memes.filter(m => m.imgUrl !== action.payload)};
+      return {...state, memes: state.memes.filter(m => m.id !== action.payload)};
     
     default:
       return state;
