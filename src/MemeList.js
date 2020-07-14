@@ -8,7 +8,7 @@ function MemeList() {
   const dispatch = useDispatch();
 
   const addMeme = (data) => dispatch({ type: "ADD", payload: data });
-  const removeMeme = (imgUrl) => dispatch({ type: "REMOVE", payload: imgUrl });
+  const removeMeme = (id) => dispatch({ type: "REMOVE", payload: id });
 
   return (
     <div className="MemeList">
